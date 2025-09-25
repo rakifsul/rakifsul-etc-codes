@@ -1,0 +1,51 @@
+{
+    "name": "RF JSON Static Search",
+    "description": "Publii Search Based on JSON Feed. Modified from Google Custom Search plugin by TidyCustoms.",
+    "license": "GPL-3.0",
+    "author": "RAKIFSUL",
+    "version": "2025.06.22",
+    "scope": "site",
+    "minimumPubliiVersion": "0.40.0",
+    "usePluginSettingsView": false,
+    "messageInOptions": {
+        "type": "info",
+        "text": "Make sure 'JSON Feed', 'Search' and 'Search subpage' options are enabled."
+    },
+    "requiredFeatures": [
+        "customSearch"
+    ],
+    "config": [
+        {
+            "name": "jsonUrl",
+            "label": "JSON URL",
+            "note": "You can change the default JSON URL.",
+            "group": "Search config",
+            "value": "./search.json",
+            "type": "text"
+        },
+        {
+            "name": "searchParam",
+            "label": "Search parameter",
+            "note": "You can change the default \"q\" parameter.",
+            "group": "Search config",
+            "value": "q",
+            "type": "text"
+        },
+        {
+            "name": "searchPlaceholder",
+            "label": "Input placeholder",
+            "note": "",
+            "group": "Theme config",
+            "value": "search...",
+            "type": "text"
+        },
+        {
+            "name": "searchSubmitLabel",
+            "label": "Submit button label",
+            "note": "",
+            "group": "Theme config",
+            "value": "Submit",
+            "type": "text"
+        }
+    ]
+}

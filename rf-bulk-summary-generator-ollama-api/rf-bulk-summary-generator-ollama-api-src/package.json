@@ -1,0 +1,13 @@
+{
+  "name": "rf-bulk-summary-generator-ollama-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}

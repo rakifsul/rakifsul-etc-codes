@@ -1,0 +1,16 @@
+{
+  "name": "rf_rag_sederhana_ollama_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}

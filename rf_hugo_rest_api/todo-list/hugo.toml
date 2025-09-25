@@ -1,0 +1,27 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'RF Hugo Todo'
+theme = 'bootstrap'
+
+sectionPagesMenu = 'main'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 10
+[[menu.main]]
+  name = 'Todo 1'
+  url = '/todo-inline-html'
+  weight = 20
+[[menu.main]]
+  name = 'Todo 2'
+  url = '/todo-shortcode-html'
+  weight = 30
+[[menu.main]]
+  name = 'Todo 3'
+  url = '/todo-shortcode-rest'
+  weight = 40

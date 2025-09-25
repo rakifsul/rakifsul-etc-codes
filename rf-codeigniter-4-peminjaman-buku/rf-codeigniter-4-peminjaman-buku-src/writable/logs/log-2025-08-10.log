@@ -1,0 +1,271 @@
+DEBUG - 2025-08-10 16:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 16:23:47 --> ErrorException: Undefined variable $labels
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/dashboard.php on line 38.
+ 1 APPPATH/Views/admin/dashboard.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $labels', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Views/admin/dashboard.php', 38)
+ 2 SYSTEMPATH/View/View.php(226): include('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Views/admin/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 4 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH/Controllers/AdminDashboard.php(19): view('admin/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 16:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-10 16:25:40 --> SQLite3Exception: Unable to prepare statement: no such function: DATE_FORMAT in /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Database/SQLite3/Connection.php:176
+Stack trace:
+#0 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Database/SQLite3/Connection.php(176): SQLite3->query('\r\n            S...')
+#1 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('\r\n            S...')
+#2 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Controllers/AdminDashboard.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+#5 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+#6 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 /home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/system/rewrite.php(44): require_once('/home/dumjahe/D...')
+#11 {main}
+CRITICAL - 2025-08-10 16:25:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such function: DATE_FORMAT
+[Method: GET, Route: admin]
+in SYSTEMPATH/Database/BaseConnection.php on line 684.
+ 1 APPPATH/Controllers/AdminDashboard.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-10 16:25:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such function: DATE_FORMAT
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 181.
+ 1 SYSTEMPATH/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 2 SYSTEMPATH/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 3 APPPATH/Controllers/AdminDashboard.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-10 16:25:40 --> [Caused by] SQLite3Exception: Unable to prepare statement: no such function: DATE_FORMAT
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 176.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(176): SQLite3->query('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 2 SYSTEMPATH/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 3 SYSTEMPATH/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 4 APPPATH/Controllers/AdminDashboard.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT DATE_FORMAT(created_at, \'%Y-%m\') AS month, COUNT(*) as total
+            FROM serps
+            GROUP BY month
+            ORDER BY month ASC
+        ')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 16:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 16:28:55 --> ErrorException: Undefined array key "month"
+[Method: GET, Route: admin]
+in APPPATH/Controllers/AdminDashboard.php on line 31.
+ 1 APPPATH/Controllers/AdminDashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Controllers/AdminDashboard.php', 31)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminDashboard->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboard))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 16:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 16:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:29:27 --> Error: Call to a member function getValue() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:29:45 --> Error: Call to a member function getValue() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:30:25 --> Error: Call to a member function getValue() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:30:51 --> Error: Call to a member function getValue() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:32:38 --> Error: Call to a member function getValue() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-10 17:50:44 --> ErrorException: Undefined variable $request
+[Method: POST, Route: admin/setting/do_apply_setting]
+in APPPATH/Controllers/AdminSetting.php on line 29.
+ 1 APPPATH/Controllers/AdminSetting.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Controllers/AdminSetting.php', 29)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->do_apply_setting()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+DEBUG - 2025-08-10 17:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 17:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 18:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 20:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-10 23:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

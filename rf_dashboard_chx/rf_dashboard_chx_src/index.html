@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RF Dashboard</title>
+
+        <link
+            id="favicon"
+            rel="shortcut icon"
+            type="image/png"
+            href="hypnotize.png" />
+
+        <link
+            href="vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body id="app" class="bg">
+        <div class="container rounded bg-dark text-light mt-5 p-5">
+            <header>
+                <h1>RF Dashboard</h1>
+                <p><i>Flying to the coder's high...</i></p>
+            </header>
+            <hr class="border border-danger border-1 opacity-50" />
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input
+                            id="query"
+                            type="text"
+                            class="form-control"
+                            placeholder="Write your query here..."
+                            aria-label="Write your query here..."
+                            aria-describedby="search"
+							autocomplete="off"
+                            autofocus />
+                        <a class="btn btn-outline-light" id="search" href="#">
+                            Execute Query
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="placeholder" class="text-center"></div>
+                </div>
+            </div>
+            <hr class="border border-danger border-1 opacity-50" />
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <button
+                            class="btn btn-small btn-outline-light mb-2"
+                            type="button"
+                            id="toggle-join"
+                            data-bs-toggle="button">
+                            Join: Off
+                        </button>
+                    </div>
+                    <div id="placeholder1" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery-3.7.1.min.js"></script>
+        <script src="vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

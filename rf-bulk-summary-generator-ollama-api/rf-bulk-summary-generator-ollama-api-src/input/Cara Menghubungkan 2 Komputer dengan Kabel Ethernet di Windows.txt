@@ -1,0 +1,23 @@
+Sekarang, kita andaikan bahwa terdapat 2 komputer yang masing-masing memiliki 1 slot ethernet dan masing masing memiliki 1 adapter WiFi.
+
+Komputer 1 adalah komputer utama yang mana aktivitas online kita dilakukan.
+
+Komputer 2 merupakan komputer cadangan yang jarang digunakan tapi terinstall aplikasi self-hosted seperti Kiwix Serve.
+
+Catatan: Jika Anda belum tahu tentang Kiwix Serve, itu adalah aplikasi web self hosted yang berfungsi sebagai server wikipedia offline.
+
+Seandainya, jika kita bertujuan mengakses komputer 2 karena ingin membaca wikipedia dari web browser di komputer 1, kita perlu menghubungkan kedua komputer tadi.
+
+Cara ini sebenarnya tidak perlu sulit.
+
+Kita tinggal menyalakan kedua komputer tadi, kemudian menghubungkannya ke jaringan WiFi kita di rumah.
+
+Tapi, di sini, saya membahas koneksi dengan kabel ethernet.
+
+Karena, biasanya, walaupun tergantung fitur komputernya, kecepatan transfer data dengan kabel ethernet lebih cepat.
+
+Selain itu, dengan menghubungkannya via kabel, maka kita bisa memilih apakah komputer 2 tadi akan diberi akses ke internet atau tidak.
+
+Lalu, bagaimana caranya? Saya akan bahas, tapi untuk sistem operasi Windows saja.
+
+Yang harus Anda ingat, pada prinsipnya, di komputer 1 dan komputer 2, ip yang dipasang harus berada pada network yang sama.

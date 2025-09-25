@@ -1,0 +1,605 @@
+ERROR - 2025-08-09 00:35:21 --> SQLite3Exception: NOT NULL constraint failed: users.password in /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php:175
+Stack trace:
+#0 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php(175): SQLite3->exec('INSERT INTO `us...')
+#1 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `us...')
+#2 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/app/Database/Migrations/2025-08-09-000926_Init.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(876): App\Database\Migrations\Init->up()
+#6 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-08-09 00:36:35 --> SQLite3Exception: table `users` already exists in /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php:175
+Stack trace:
+#0 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php(175): SQLite3->exec('CREATE TABLE `u...')
+#1 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('CREATE TABLE `u...')
+#2 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/app/Database/Migrations/2025-08-09-000926_Init.php(38): CodeIgniter\Database\Forge->createTable('users')
+#5 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(876): App\Database\Migrations\Init->up()
+#6 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-08-09 00:36:54 --> SQLite3Exception: table `users` already exists in /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php:175
+Stack trace:
+#0 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php(175): SQLite3->exec('CREATE TABLE `u...')
+#1 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('CREATE TABLE `u...')
+#2 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/app/Database/Migrations/2025-08-09-000926_Init.php(38): CodeIgniter\Database\Forge->createTable('users')
+#5 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(876): App\Database\Migrations\Init->up()
+#6 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#14 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-08-09 00:37:15 --> SQLite3Exception: table `users` already exists in /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php:175
+Stack trace:
+#0 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/SQLite3/Connection.php(175): SQLite3->exec('CREATE TABLE `u...')
+#1 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(729): CodeIgniter\Database\SQLite3\Connection->execute('CREATE TABLE `u...')
+#2 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/app/Database/Migrations/2025-08-09-000926_Init.php(38): CodeIgniter\Database\Forge->createTable('users')
+#5 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(876): App\Database\Migrations\Init->up()
+#6 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-09 00:43:28 --> CodeIgniter\Filters\Exceptions\FilterException: "adminfilter" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('adminfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:43:37 --> CodeIgniter\Filters\Exceptions\FilterException: "adminfilter" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('adminfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:43:40 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:44:20 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:45:45 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:46:23 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:46:36 --> CodeIgniter\Filters\Exceptions\FilterException: "adminfilter" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('adminfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:46:43 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:47:24 --> CodeIgniter\Filters\Exceptions\FilterException: "loginfilter" filter must have a matching alias defined.
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('loginfilter')
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('loginfilter', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:48:34 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:48:39 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:49:08 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:50:04 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:50:09 --> Error: Class "Config\AdminFilter" not found
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\AdminFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:53:26 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:53:29 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 00:57:46 --> Error: Call to a member function where() on null
+[Method: POST, Route: auth/do_login]
+in APPPATH/Controllers/AuthLogin.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthLogin->do_login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthLogin))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:00:11 --> Error: Call to a member function where() on null
+[Method: POST, Route: auth/do_login]
+in APPPATH/Controllers/AuthLogin.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthLogin->do_login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthLogin))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:00:39 --> Error: Call to a member function where() on null
+[Method: POST, Route: auth/do_login]
+in APPPATH/Controllers/AuthLogin.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthLogin->do_login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthLogin))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:02:56 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:02:58 --> Error: Class "Config\AdminFilter" not found
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\AdminFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:03:00 --> Error: Class "Config\AdminFilter" not found
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\AdminFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:03:04 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:03:16 --> Error: Class "Config\AdminFilter" not found
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\AdminFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:03:20 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:04:13 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:04:40 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:04:54 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:06:13 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:06:52 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:08:22 --> Error: Class "Config\AdminFilter" not found
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\AdminFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:08:24 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:08:50 --> Error: Class "Config\LoginFilter" not found
+[Method: GET, Route: auth/login]
+in SYSTEMPATH/Filters/Filters.php on line 299.
+ 1 SYSTEMPATH/Filters/Filters.php(239): CodeIgniter\Filters\Filters->createFilter('Config\\LoginFilter')
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('auth/login', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:18:11 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:19:47 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:21:26 --> ErrorException: Undefined variable $allRoles
+[Method: GET, Route: admin/setting]
+in APPPATH/Controllers/AdminSetting.php on line 19.
+ 1 APPPATH/Controllers/AdminSetting.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allRoles', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/app/Controllers/AdminSetting.php', 19)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:21:41 --> Error: Class "App\Helpers\STAR" not found
+[Method: GET, Route: admin/setting]
+in APPPATH/Views/admin/setting.php on line 33.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render('admin/setting', [], true)
+ 4 APPPATH/Controllers/AdminSetting.php(18): view('admin/setting', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:22:06 --> Error: Class "STAR" not found
+[Method: GET, Route: admin/setting]
+in APPPATH/Views/admin/setting.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render('admin/setting', [], true)
+ 4 APPPATH/Controllers/AdminSetting.php(18): view('admin/setting', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 01:22:08 --> Error: Class "STAR" not found
+[Method: GET, Route: admin/setting]
+in APPPATH/Views/admin/setting.php on line 30.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 3 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render('admin/setting', [], true)
+ 4 APPPATH/Controllers/AdminSetting.php(18): view('admin/setting', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminSetting->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminSetting))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GalaxSearch/rf_galaxsearch/public/index.php')
+CRITICAL - 2025-08-09 04:28:13 --> Error: Call to a member function insert() on null
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:28:56 --> Error: Call to a member function insert() on null
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:31:43 --> Error: Call to a member function insert() on null
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 39.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:38:12 --> Error: Call to undefined function App\Controllers\getPageMeta()
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:38:35 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 35.
+ 1 APPPATH/Controllers/GimmeMore.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Controllers/GimmeMore.php', 35)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:39:54 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 36.
+ 1 APPPATH/Controllers/GimmeMore.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Controllers/GimmeMore.php', 36)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 04:46:48 --> Error: Class "App\Helpers\DOMDocument" not found
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Helpers/G.php on line 48.
+ 1 APPPATH/Controllers/GimmeMore.php(28): App\Helpers\G::getPageMeta('https://www.google.com')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 05:05:44 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given
+[Method: POST, Route: do_gimme_more]
+in APPPATH/Controllers/GimmeMore.php on line 47.
+ 1 APPPATH/Controllers/GimmeMore.php(47): count('')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GimmeMore->do_gimme_more()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GimmeMore))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')
+CRITICAL - 2025-08-09 12:04:48 --> ErrorException: Undefined variable $resultTitle
+[Method: GET, Route: /]
+in APPPATH/Views/gimme.php on line 12.
+ 1 APPPATH/Views/gimme.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resultTitle', '/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Views/gimme.php', 12)
+ 2 SYSTEMPATH/View/View.php(226): include('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/app/Views/gimme.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():223}()
+ 4 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render('gimme', [], true)
+ 5 APPPATH/Controllers/Gimme.php(19): view('gimme', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Gimme->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gimme))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/dumjahe/Documents/Project/Big-Ideas/RF-GimmeSearch/rf_gimmesearch/public/index.php')

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featured on RF Hugo Todo</title>
+    <link>http://localhost:1313/tags/featured/</link>
+    <description>Recent content in Featured on RF Hugo Todo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 May 2025 04:43:14 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/my-first-post/</link>
+      <pubDate>Fri, 30 May 2025 04:43:14 +0700</pubDate>
+      <guid>http://localhost:1313/my-first-post/</guid>
+      <description>&lt;p&gt;Contoh halaman posting biasa.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# untuk memilih dan menjalankan model.gguf secara interaktif
+# pastikan sudah install fzf
+
+# argument pertama dari perintah ini adalah folder path absolut dari model.
+MODEL_FOLDER=$1
+
+# masuk ke folder models
+MODEL=$(ls $MODEL_FOLDER/*.gguf | fzf --prompt="Pilih model: " --height=20 --reverse)
+
+if [ -z "$MODEL" ]; then
+  echo "Tidak ada model dipilih."
+  exit 1
+fi
+
+echo "Menjalankan model: $MODEL"
+llama-server -m "$MODEL" --host 127.0.0.1 --port 11000

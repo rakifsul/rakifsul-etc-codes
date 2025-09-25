@@ -1,0 +1,16 @@
+{
+  "name": "rf-respon-emosional-ollama-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.16.1"
+  }
+}

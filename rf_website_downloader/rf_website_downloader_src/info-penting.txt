@@ -1,0 +1,3 @@
+aplikasi chromium letakkan di folder ini:
+
+jadi, binary-nya ada di rf_website_downloader_src/chromium/chromium.exe [misalnya]
