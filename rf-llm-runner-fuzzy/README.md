@@ -27,9 +27,12 @@ chmod +x ./rf-llm-runner-fuzzy
 ```
 # jalankan
 ./rf-llm-runner-fuzzy /folder/ke/daftar/model-files
-
-# nanti daftar model akan muncul
-# gunakan panah atas dan bawah untuk memilih
-# kemudian enter
-# kunjungi URL yang ada di output
 ```
+
+nanti daftar model akan muncul
+
+gunakan panah atas dan bawah untuk memilih
+
+kemudian enter
+
+kunjungi URL yang ada di output
