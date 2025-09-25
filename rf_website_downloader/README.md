@@ -1,4 +1,4 @@
-// Cara Penggunaan
+# Cara Penggunaan
 
 npm install
 
