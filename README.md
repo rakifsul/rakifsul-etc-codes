@@ -14,7 +14,7 @@ The projects can be categorized to something like this:
 
 But they all may be mixed in one folder, so just explore it.
 
-Hopefully, it works.
+Hopefully, it works...
 
 ## Link untuk Memberi Saya Uang
 
